@@ -1,6 +1,17 @@
 def join_ingredients(src)
-  # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
-  #
+  row_index = 0 
+  while row_index < src.count do
+    element_index = 0 
+    while element_index < src[row_index].count do
+      puts "I love #{[row_index][element_index]} and #{element_index} on my pizza"
+      element_index += 1 
+    end
+    row_index += 1 
+  end
+    
+  
+  
+  
   # Build a new Array that contains strings where each pair of foods is
   # inserted into this template:
   #
@@ -9,12 +20,47 @@ def join_ingredients(src)
 end
 
 def find_greater_pair(src)
+  outer_results = []
+  row_index = 0 
+  while row_index < src.count do
+    element_index = 0
+    inner_results = []
+    while element_index < src[row_index].count do
+      if src[row_index][element_index] > 0
+        inner_results << src[row_index][element_index]
+      end
+      element_index += 1 
+    end
+    outer_results << inner_results
+    row_index += 1 
+  end
+  
+  
+  
+  
+  
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
 end
 
 def total_even_pairs(src)
+  total = 0 
+  row_index = 0 
+  while row_index < src.count do
+    element_index = 0 
+    while element_index < src[row_index].count % 2 = 0 do
+      total +=
+    src[row_index][element_index] 
+    
+        element_index += 1 
+      end
+      row_index += 1 
+    end 
+  
+  
+  
+  
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # if both numbers in the pair are even, then add both those numbers to the
   # total
